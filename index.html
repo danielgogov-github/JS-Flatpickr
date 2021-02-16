@@ -11,20 +11,45 @@
 <body>
     <div class="wrapper">
 
-        <form class="form" action="">
-            <input type="text" class="flatpickr">
-            <br><br>
+        <div class="form">
+            <form action="submit.php" method="POST">
+                <!-- <input type="text" class="flatpickr"> -->
+                <br><br>
+    
+                <div class="group">
+                    <div class="hidden">Hidden!</div>
+                    <input type="checkbox" name="" id="cb1">
+                    <label for="cb1">Checkbox 01</label>
+                    <br>
+                    <input type="checkbox" name="" id="cb2">
+                    <label for="cb2">Checkbox 02</label>
+                    <br>
+                    <input type="checkbox" name="" id="cb3">
+                    <label for="cb3">Checkbox 03</label>
+                </div>
+                <br><br>
 
-            <input type="checkbox" class="group" name="cb1" checked>Checkbox 001
-            <br>
-            <input type="checkbox" class="group" name="cb2">Checkbox 002
-            <br>
-            <input type="checkbox" class="group" name="cb3">Checkbox 003
-            <br>
+                <div class="group">
+                    <div class="hidden">Hidden!</div>
+                    <input type="checkbox" name="" id="cb4">
+                    <label for="cb4">Checkbox 04</label>
+                    <br>
+                    <input type="checkbox" name="" id="cb5">
+                    <label for="cb5">Checkbox 05</label>
+                    <br>
+                    <input type="checkbox" name="" id="cb6">
+                    <label for="cb6">Checkbox 06</label>
+                </div>
+    
+    
+    
+                <input type="hidden" name="username">
+    
+                <br>
+                <input type="submit" value="submit">
+            </form>
+        </div>
 
-            <br>
-            <input type="submit" value="submit">
-        </form>
 
         <br>
         <div class="image">*** Image ***</div>

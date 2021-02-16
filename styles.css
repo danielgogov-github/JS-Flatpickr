@@ -1,3 +1,11 @@
 .image {
     display: none;
 }
+
+.form {
+    text-align: center;
+}
+
+.hidden {
+    visibility: hidden;
+}

@@ -12,30 +12,33 @@ flatpickr('.flatpickr', {
 });
 
 form.addEventListener('submit', (event) => {
+    // event.preventDefault();
+    // if(inputFlatpickr.value) {
+    //     dateArray = inputFlatpickr.value.split('--');
+    // }
+    // console.log(dateArray);
     event.preventDefault();
 
-    if(inputFlatpickr.value) {
-        dateArray = inputFlatpickr.value.split('--');
-    }
+    console.log(form.querySelector('.group').checked);
 
-    console.log(dateArray);
+    // setTimeout(() => {
+    //     form.submit();
+    // }, 5000);
 });
 
 // Checkboxes
-let allCheckboxes = form.querySelectorAll('.group');
-let image = wrapper.querySelector('.image');
-
+let allCheckboxes = form.querySelectorAll('input[type="checkbox"]');
 allCheckboxes.forEach((checkbox) => {
-    checkbox.addEventListener('click', () => {
-        let allCheckboxesChecked = form.querySelectorAll('.group:checked');
+    checkbox.addEventListener('click', (event) => {
+        let group = event.target.parentNode;
+        let hidden = group.querySelector('.hidden');
+        let allGroupCheckboxes = group.querySelectorAll('input[type="checkbox"]');
+        let allGroupCheckboxesChecked = group.querySelectorAll('input[type="checkbox"]:checked');
 
-        if(allCheckboxesChecked.length === allCheckboxes.length) {
-            image.style.display = 'block';
+        if(allGroupCheckboxes.length === allGroupCheckboxesChecked.length) {
+            hidden.style.visibility = 'visible';
         }else {
-            image.style.display = 'none';
+            hidden.style.visibility = 'hidden';
         }
-
-        console.log(allCheckboxes.length);
-        console.log(allCheckboxesChecked.length);        
     });
 });
